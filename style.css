@@ -1,1 +1,136 @@
+/* 1. Core Setup & Variables */
+:root {
+    --background: #1e1e1e;
+    --text: #d4d4d4;
+    --accent: #00ff41;
+    --header: #333333;
+    --link: #569cd6;
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 2. Terminal Window Styling */
+.terminal-window {
+    width: 100%;
+    max-width: 800px;
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: var(--header);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.terminal-header .buttons {
+    display: flex;
+}
+
+.terminal-header .btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.btn.close { background-color: #ff5f56; }
+.btn.minimize { background-color: #ffbd2e; }
+.btn.maximize { background-color: #27c93f; }
+
+.terminal-header .title {
+    color: var(--text);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+/* 3. Command & Prompt Styling */
+.command-list {
+    list-style: none;
+    margin: 10px 0;
+}
+.command-list a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+.command-list a:hover {
+    background-color: rgba(0, 255, 65, 0.1);
+}
+
+.prompt {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.prompt .user { color: var(--accent); }
+.prompt .colon { color: var(--text); margin: 0 2px; }
+.prompt .tilde { color: var(--link); }
+.prompt .dollar { color: var(--text); margin-left: 8px; margin-right: 8px;}
+
+.cursor {
+    display: inline-block;
+    background-color: var(--accent);
+    width: 10px;
+    height: 1.2em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* 4. Output Area & Interactivity */
+.output-area {
+    margin-top: 20px;
+    border-top: 1px dashed #444;
+    padding-top: 20px;
+}
+
+.output-area section {
+    display: none; /* Hide sections by default */
+}
+
+.output-area section:target {
+    display: block; /* Show the targeted section */
+}
+
+.output-area h2 {
+    color: var(--accent);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.output-area a {
+    color: var(--link);
+}
