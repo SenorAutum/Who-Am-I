@@ -134,3 +134,41 @@ body {
 .output-area a {
     color: var(--link);
 }
+
+/* 5. Output Area Enhancements (NEW) */
+
+.project {
+    border-left: 3px solid var(--accent);
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--background);
+    transition: background-color 0.3s;
+}
+
+.project:hover {
+    background-color: #2a2a2d; /* A subtle hover effect */
+}
+
+.project h3 {
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.project a, .project span {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.project span { /* For the "In Development" status */
+    font-style: italic;
+    color: #8c8c8c; /* A dimmer color for status text */
+}
+
+#skills ul {
+    list-style-type: '» '; /* Adds a nice CLI-style bullet */
+    padding-left: 20px;
+}
+
+.contact-details {
+    margin-top: 10px;
+}
