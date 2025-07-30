@@ -4,7 +4,7 @@ A personal portfolio for Brandon Mutua Mwanzia, built for the PLP Academy Portfo
 
 **Live Demo Link:** 
 
-![Project Screenshot](./assets/Screenshot 2025-07-29 224159.png) 
+![Project Screenshot](./assets/screenshot.png)
 
 ## About The Project
 
